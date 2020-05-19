@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DNS Stack 1`] = `
+Object {
+  "Resources": Object {
+    "DomainARecordC223EFD6": Object {
+      "Properties": Object {
+        "AliasTarget": Object {
+          "DNSName": "s3-website-us-east-1.amazonaws.com",
+          "HostedZoneId": "Z3AQBSTGFYJSTF",
+        },
+        "HostedZoneId": "DUMMY",
+        "Name": "example.com.",
+        "Type": "A",
+      },
+      "Type": "AWS::Route53::RecordSet",
+    },
+    "SubDomainARecord1F984879": Object {
+      "Properties": Object {
+        "AliasTarget": Object {
+          "DNSName": "s3-website-us-east-1.amazonaws.com",
+          "HostedZoneId": "Z3AQBSTGFYJSTF",
+        },
+        "HostedZoneId": "DUMMY",
+        "Name": "www.example.come.example.com.",
+        "Type": "A",
+      },
+      "Type": "AWS::Route53::RecordSet",
+    },
+  },
+}
+`;
