@@ -10,11 +10,11 @@ This is AWS CDK project for deploying a basic website in S3. This creates all S3
 1. Install NodeJS
 2. Install AWS CDK - `npm install -g aws-cdk`
 3. Install AWS CLI - [link](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-welcome.html)
-4. Create IAM user with programmatic and administrator access. Make a note of access key id and secret key.
+4. In AWS console, create IAM user with programmatic and administrator access. Make a note of access key id and secret key.
 5. Execute `aws configure` and provide the access key from above step.
 6. Check in website code to AWS codecommit with `buildspec.yml` in root. e.g., webiste [code](https://github.com/sajeevsp/webpack-bootstrap-react). Take a note of the repository arn.
 7. Create repository in AWS codecommit for cdk code and make a note of arn.
-8. Make a copy of code in this repository.
+8. Clone the code in this repository.
 9. Update variables in `bin/index.ts` with account id, domain name, site repository arn and cdk repository arn.
 10. Push code changes to AWS codecommit repository.
 11. `npm install`
