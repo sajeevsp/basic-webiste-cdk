@@ -21,7 +21,7 @@ This is AWS CDK project for deploying a basic website in S3. This creates all S3
 12. `npm run build`
 13. 'cdk ls' - this will display three stacks - CDK, DNS and siteName.
 14. `cdk deploy CDKStack` - this installs a self updating pipeline, create required S3 buckets and pipeline for deploying website code.
-15. After completion of deployment, use S3 url to test the site.
+15. After completion of deployment, use S3 url to test the site. (To find URL, go to CloudFormation -> Stacks --> yourdomain -> Outputs)
 16. Ensure Route53 --> registered domain has the site you are trying to host.
 17. `cdk deploy DNSStack`
 
