@@ -2,6 +2,24 @@
 
 exports[`CDK Stack 1`] = `
 Object {
+  "Outputs": Object {
+    "StackDomainBucketUrlDAD69D60": Object {
+      "Value": Object {
+        "Fn::GetAtt": Array [
+          "StackDomainBucket3923566D",
+          "WebsiteURL",
+        ],
+      },
+    },
+    "StackSubDomainBucketUrlE2348E84": Object {
+      "Value": Object {
+        "Fn::GetAtt": Array [
+          "StacksubDomainBucket03C1DBF0",
+          "WebsiteURL",
+        ],
+      },
+    },
+  },
   "Resources": Object {
     "StackBuildA118851E": Object {
       "Properties": Object {

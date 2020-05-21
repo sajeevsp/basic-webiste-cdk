@@ -1,3 +1,4 @@
+import * as cdk from "@aws-cdk/core";
 import { Construct } from "@aws-cdk/core";
 import * as codebuild from "@aws-cdk/aws-codebuild";
 import * as codecommit from "@aws-cdk/aws-codecommit";
@@ -28,6 +29,10 @@ class StaticSite extends Construct {
       websiteErrorDocument: "index.html",
     });
 
+    new cdk.CfnOutput(this, "DomainBucketUrl", {
+      value: siteS3.bucketWebsiteUrl,
+    });
+
     //S3 bucket representing sub domain, empty bucket, all requests will be redirected to primary S3 bucket.
     const subDomainS3 = new s3.Bucket(this, "subDomainBucket", {
       bucketName: siteSubDomain,
@@ -35,6 +40,10 @@ class StaticSite extends Construct {
         hostName: siteDomain,
         protocol: RedirectProtocol.HTTP,
       },
+    });
+
+    new cdk.CfnOutput(this, "SubDomainBucketUrl", {
+      value: subDomainS3.bucketWebsiteUrl,
     });
 
     //Code repository that houses npm front end application.
