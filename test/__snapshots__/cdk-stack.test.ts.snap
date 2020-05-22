@@ -534,6 +534,7 @@ Object {
           },
           "Type": "S3",
         },
+        "Name": "CDKStack",
         "RestartExecutionOnUpdate": true,
         "RoleArn": Object {
           "Fn::GetAtt": Array [

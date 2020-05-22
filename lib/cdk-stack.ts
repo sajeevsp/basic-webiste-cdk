@@ -45,6 +45,7 @@ class CDKStack extends Stack {
     });
 
     new codepipeline.Pipeline(this, "Pipeline", {
+      pipelineName: name,
       restartExecutionOnUpdate: true,
       stages: [
         {

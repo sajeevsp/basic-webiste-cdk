@@ -67,6 +67,7 @@ class StaticSite extends Construct {
     //Build uses buildspec.yml in the root of repository to execute right npm commands.
     //Deploy copies output of npm build over to S3 bucket.
     new codepipeline.Pipeline(this, "Pipeline", {
+      pipelineName: siteDomain,
       stages: [
         {
           stageName: "Source",

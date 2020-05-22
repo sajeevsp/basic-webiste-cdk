@@ -302,6 +302,7 @@ Object {
           },
           "Type": "S3",
         },
+        "Name": "example.com",
         "RoleArn": Object {
           "Fn::GetAtt": Array [
             "StackPipelineRole223AB7FB",
